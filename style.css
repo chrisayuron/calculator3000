@@ -50,6 +50,10 @@ body{
 .group-button{
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    width: 20rem;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .btn{
@@ -65,7 +69,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 } 
 
-#val2{
+#val2,#val1{
     display: none;
     /* visibility: hidden; */
 }

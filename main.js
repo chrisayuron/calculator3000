@@ -12,13 +12,13 @@ igual.addEventListener('click',()=>{
     let a = +valor[0].value
     let b = +valor[1].value    
     if(operador.textContent==='+'){
-      display.innerText=b+a
+      display.innerText=b+ +display.innerText
     } else if(operador.textContent==='-'){
-        display.innerText=b-a
+        display.innerText=b-display.innerText
     }else if(operador.textContent==='*'){
-        display.innerText=b*a
+        display.innerText=b*display.innerText
     } else if(operador.textContent==='/'){
-        display.innerText=b/a
+        display.innerText=b/display.innerText
     } else {
         display.innerText='Error'
     }
@@ -27,24 +27,24 @@ igual.addEventListener('click',()=>{
 
 suma.addEventListener('click',()=>{
     operador.textContent='+'
-    valor[1].value=valor[0].value
-    valor[0].value=''
+    valor[1].value=display.innerText
+    display.innerText=''
     
 })
 resta.addEventListener('click',()=>{
     operador.textContent='-'
-    valor[1].value=valor[0].value
-    valor[0].value=''
+    valor[1].value=display.innerText
+    display.innerText=''
 })
 multi.addEventListener('click',()=>{
     operador.textContent='*'
-    valor[1].value=valor[0].value
-    valor[0].value=''
+    valor[1].value=display.innerText
+    display.innerText=''
 })
 division.addEventListener('click',()=>{
     operador.textContent='/'
-    valor[1].value=valor[0].value
-    valor[0].value=''
+    valor[1].value=display.innerText
+    display.innerText=''
 })
 
 borrar.addEventListener('click',()=>{
@@ -52,3 +52,11 @@ borrar.addEventListener('click',()=>{
     display.innerText=''
     valor[0].value=''
 })
+
+for(let i=0;i<=9;i++){
+    document.getElementById('num'+i).addEventListener('click',presion)
+}
+
+function presion(e){
+    display.innerText=display.innerText+e.target.value
+}
