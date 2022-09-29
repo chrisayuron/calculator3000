@@ -44,7 +44,7 @@ body{
 #operador{
     width: 2rem;
     height: 3rem;
-    background-color: aqua;
+    display: none;
 }
 
 .group-button{
@@ -65,4 +65,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 } 
 
+#val2{
+    display: none;
+    /* visibility: hidden; */
+}
 
